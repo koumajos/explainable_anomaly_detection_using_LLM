@@ -75,7 +75,7 @@ If you use the dataset, please cite:
 
 ```bibtex
 @article{koumar2024cesnet,
-  author    = {Josef Koumar and Kamil Hynek and Tomáš Čejka and Petr Šiška},
+  author    = {Josef Koumar and Karel Hynek and Tomáš Čejka and Pavel Šiška},
   title     = {CESNET-Timeseries24: Time series dataset for network traffic anomaly detection and forecasting},
   journal   = {arXiv preprint arXiv:2409.18874},
   year      = {2024}
