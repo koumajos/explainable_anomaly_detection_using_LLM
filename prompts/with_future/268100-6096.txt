@@ -1,0 +1,130 @@
+Pretend that you are a bot, that explains what could cause an anomaly on a network based on anomaly detection system that works with network traffic volumetric data (time series of various metrics like number of packets, number of fLows, number of bytes transfered, number of IPs contacted), the data are associated with IP address observed on network, behind that IP address can be single server, NAT or whatever else, each tick of the time series data represents aggregation over one hour interval, each metric anomaly is detected based on individual time series, so an anomaly can be detected on one or more time series at the same time. The provided data that are not anomalous can be informative to help determining what is going on on the network. The system has already detected anomaly, so you are given a values of that anomaly that belongs to closest upper and Lower anomaly and you should only decide if it is correctly marked anomaly or it is False Positive. Then you should give me priority (Zero, Low, Medium, High, Critical) for the soc team to start investigation. Moreover, give me your confidence with your decision (Low, Medium, High). Then give me short explanation (one sentence) of why you decide like that. Then give me a label in maximum three words what it can be. And finally you should give me the your suggested action for soc team.
+
+Give write only these 5 thinks (decision, label, priority, confidence, short explanation, and suggested action) and nothing else.
+
+The information from time series detection is folLowing:
+
+Time stamp: 2024-06-19 00:00:00+00:00
+Weekend: False
+Holiday: False
+
+Average Duration
+is detected as upper anomaly value
+Value in the point of detected anomaly: 114.84.
+48 hour window mean 46.81 and standard deviation 16.55 before anomaly.
+7 days window mean 57.63 and standard deviation 20.74 before anomaly.
+48 hour window mean 92.19 and standard deviation 49.72 after anomaly.
+7 days window mean 57.23 and standard deviation 37.51 after anomaly.
+
+Average TTL
+is not detected as anomaly value
+Value in the point of detected anomaly: 113.34.
+48 hour window mean 119.31 and standard deviation 16.09 before anomaly.
+7 days window mean 120.46 and standard deviation 12.89 before anomaly.
+48 hour window mean 120.59 and standard deviation 8.08 after anomaly.
+7 days window mean 122.05 and standard deviation 12.79 after anomaly.
+
+Direction Ratio Bytes
+is not detected as anomaly value
+Value in the point of detected anomaly: 0.41.
+48 hour window mean 0.4 and standard deviation 0.07 before anomaly.
+7 days window mean 0.41 and standard deviation 0.06 before anomaly.
+48 hour window mean 0.45 and standard deviation 0.05 after anomaly.
+7 days window mean 0.44 and standard deviation 0.06 after anomaly.
+
+Number of Bytes
+is detected as upper anomaly value
+Value in the point of detected anomaly: 62751.
+48 hour window mean 23623.88 and standard deviation 11732.79 before anomaly.
+7 days window mean 29482.88 and standard deviation 11056.42 before anomaly.
+48 hour window mean 73048.04 and standard deviation 51958.28 after anomaly.
+7 days window mean 40159.02 and standard deviation 35187.36 after anomaly.
+
+Number of Bytes In
+is detected as upper anomaly value
+Value in the point of detected anomaly: 25727.91.
+48 hour window mean 9529.14 and standard deviation 5079.24 before anomaly.
+7 days window mean 12208.01 and standard deviation 5079.55 before anomaly.
+48 hour window mean 33951.25 and standard deviation 25649.4 after anomaly.
+7 days window mean 18074.71 and standard deviation 17232.95 after anomaly.
+
+Number of Bytes Out
+is detected as upper anomaly value
+Value in the point of detected anomaly: 37023.09.
+48 hour window mean 14094.74 and standard deviation 6950.07 before anomaly.
+7 days window mean 17274.86 and standard deviation 6498.27 before anomaly.
+48 hour window mean 39096.79 and standard deviation 26475.62 after anomaly.
+7 days window mean 22084.31 and standard deviation 18145.43 after anomaly.
+
+Number of FLows
+is detected as upper anomaly value
+Value in the point of detected anomaly: 278.
+48 hour window mean 74.23 and standard deviation 36.52 before anomaly.
+7 days window mean 83.62 and standard deviation 31.51 before anomaly.
+48 hour window mean 241.71 and standard deviation 170.65 after anomaly.
+7 days window mean 131.16 and standard deviation 116.33 after anomaly.
+
+Number of Packets
+is detected as upper anomaly value
+Value in the point of detected anomaly: 1123.
+48 hour window mean 283.52 and standard deviation 137.7 before anomaly.
+7 days window mean 357.1 and standard deviation 132.75 before anomaly.
+48 hour window mean 1120.67 and standard deviation 887.03 after anomaly.
+7 days window mean 557.77 and standard deviation 596.01 after anomaly.
+
+Sum of Destination ASN
+is detected as upper anomaly value
+Value in the point of detected anomaly: 90.
+48 hour window mean 31.67 and standard deviation 8.91 before anomaly.
+7 days window mean 38.17 and standard deviation 9.15 before anomaly.
+48 hour window mean 77.98 and standard deviation 36.81 after anomaly.
+7 days window mean 50.71 and standard deviation 26.88 after anomaly.
+
+Sum of Destination IP
+is detected as upper anomaly value
+Value in the point of detected anomaly: 244.
+48 hour window mean 69.12 and standard deviation 33.23 before anomaly.
+7 days window mean 77.01 and standard deviation 29.3 before anomaly.
+48 hour window mean 216.1 and standard deviation 145.17 after anomaly.
+7 days window mean 119.49 and standard deviation 100.27 after anomaly.
+
+Sum of Destination Ports
+is not detected as anomaly value
+Value in the point of detected anomaly: 18.
+48 hour window mean 14.67 and standard deviation 4.01 before anomaly.
+7 days window mean 16.77 and standard deviation 4.17 before anomaly.
+48 hour window mean 18.92 and standard deviation 5.72 after anomaly.
+7 days window mean 19.01 and standard deviation 4.38 after anomaly.
+
+Number of Bytes TCP
+is detected as upper anomaly value
+Value in the point of detected anomaly: 627.51.
+48 hour window mean 751.31 and standard deviation 496.5 before anomaly.
+7 days window mean 835.7 and standard deviation 469.4 before anomaly.
+48 hour window mean 830.35 and standard deviation 736.14 after anomaly.
+7 days window mean 931.29 and standard deviation 533.67 after anomaly.
+
+Number of Bytes UDP
+is detected as upper anomaly value
+Value in the point of detected anomaly: 62123.49.
+48 hour window mean 22872.57 and standard deviation 11686.09 before anomaly.
+7 days window mean 28647.18 and standard deviation 11006.16 before anomaly.
+48 hour window mean 72217.69 and standard deviation 52162.98 after anomaly.
+7 days window mean 39227.74 and standard deviation 35302.62 after anomaly.
+
+Number of Packets TCP
+is detected as upper anomaly value
+Value in the point of detected anomaly: 11.23.
+48 hour window mean 9.08 and standard deviation 6.02 before anomaly.
+7 days window mean 10.16 and standard deviation 5.73 before anomaly.
+48 hour window mean 11.28 and standard deviation 9.71 after anomaly.
+7 days window mean 11.81 and standard deviation 6.82 after anomaly.
+
+Number of Packets UDP
+is detected as upper anomaly value
+Value in the point of detected anomaly: 1111.77.
+48 hour window mean 274.44 and standard deviation 137.21 before anomaly.
+7 days window mean 346.94 and standard deviation 132.17 before anomaly.
+48 hour window mean 1109.39 and standard deviation 889.03 after anomaly.
+7 days window mean 545.96 and standard deviation 596.98 after anomaly.
+
